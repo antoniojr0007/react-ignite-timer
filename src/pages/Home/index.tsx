@@ -10,7 +10,7 @@ import { NewCycleForm } from './components/NewCycleForm'
 import {
   HomeContainer,
   StartCountDownButton,
-  StopCountDownButton
+  StopCountDownButton,
 } from './styles'
 
 const newCycleFormValidationSchema = zod.object({

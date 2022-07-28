@@ -1,4 +1,3 @@
-
 import { ActionType } from './actions'
 
 export interface Cycle {
