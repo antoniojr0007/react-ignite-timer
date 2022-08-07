@@ -10,7 +10,7 @@ import { NewCycleForm } from './components/NewCycleForm'
 import {
   HomeContainer,
   StartCountDownButton,
-  StopCountDownButton,
+  StopCountDownButton
 } from './styles'
 
 const newCycleFormValidationSchema = zod.object({
@@ -41,7 +41,7 @@ export function Home() {
 
   const task = watch('task')
   const isSubmitDisabled = !task
-  const { activeCycle, createNewCycle, interruptedCurrentCycle } =
+  const { activeCycle, createNewCycle, interruptCurrentCycle } =
     useContext(CyclesContext)
 
   return (
@@ -53,7 +53,7 @@ export function Home() {
         <CountDown />
 
         {activeCycle ? (
-          <StopCountDownButton type="button" onClick={interruptedCurrentCycle}>
+          <StopCountDownButton type="button" onClick={interruptCurrentCycle}>
             <HandPalm />
             interomper
           </StopCountDownButton>
